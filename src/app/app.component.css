@@ -1,0 +1,6 @@
+.brand-corner{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: url(../assets/bg-top.png) no-repeat;
+}
