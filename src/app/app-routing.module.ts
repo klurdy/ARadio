@@ -4,6 +4,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ScanComponent } from './scan/scan.component';
 import { RecommendationsComponent } from './scan/recommendations/recommendations.component';
 import { AugmentComponent } from './scan/augment/augment.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
     {
@@ -25,8 +26,16 @@ const routes: Routes = [
         path: '3d-renders',
         component: AugmentComponent,
         data: { title: "3D Visualization" }
+    },
+    {
+        path: '',
+        component: HomeComponent,
+        data: { title: "Welcome to 3D Medical Imaging" }
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
-
 ];
 
 @NgModule({

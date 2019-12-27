@@ -6,6 +6,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ScanComponent } from './scan/scan.component';
 import { RecommendationsComponent } from './scan/recommendations/recommendations.component';
 import { AugmentComponent } from './scan/augment/augment.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { AugmentComponent } from './scan/augment/augment.component';
     HowItWorksComponent,
     ScanComponent,
     RecommendationsComponent,
-    AugmentComponent
+    AugmentComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
