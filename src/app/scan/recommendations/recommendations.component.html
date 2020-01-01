@@ -1,14 +1,17 @@
 <div class="container-fluid">
   <div class="row">
-    <img class="col-md-8" src="" />
+    <div class="col-md-8">
+      <img src="../../../assets/test.jpeg" class="radio-img"/>
+    </div>
+    
     <div class="col-md-4">
-      <h3>Predictions</h3>
+      <h3>Pneumonia Diagnosis</h3>
       <div class="mb-4">
         <div class="radio">
           <label><input type="radio" name="optradio" checked>Normal</label>
         </div>
         <div class="progress ">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+          <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
             style="width:85%">
             85%
           </div>
@@ -19,7 +22,7 @@
           <label><input type="radio" name="optradio" checked>Bacterial pneumonia</label>
         </div>
         <div class="progress flex-fill">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+          <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
             style="width:10%">
             10%
           </div>
@@ -30,13 +33,17 @@
           <label><input type="radio" name="optradio" checked>Viral pneumonia</label>
         </div>
         <div class="progress flex-fill">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+          <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
             style="width:5%">
             5%
           </div>
         </div>
       </div>
-      <a class="btn btn-primary btn-lg" routerLink="upload" role="button">View in AR</a>
+      <div class="d-flex flex-row mt-5">
+        <a class="btn btn-success btn-lg mr-3" routerLink="/3d-renders" role="button">View in AR</a>
+        <a class="btn btn-outline-primary btn-lg" routerLink="recommendations" role="button">Upload Another Scan</a>
+      </div>
+      
     </div>
   </div>
 </div>
