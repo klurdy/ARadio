@@ -12,4 +12,9 @@ export class ScanComponent implements OnInit {
   ngOnInit() {
   }
 
+  onFileChanged(event) {
+    const file = event.target.files[0];
+    console.log(file);
+  }
+
 }

@@ -1,3 +1,6 @@
-<p>
-  scan works!
-</p>
+<div class="upload-btn-wrapper">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" routerLink="upload" role="button">Upload Image</a>
+  </p>
+  <input type="file" name="myfile" (change)="onFileChanged($event)"/>
+</div>
