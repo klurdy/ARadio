@@ -2,5 +2,6 @@
   <p class="lead">
     <a class="btn btn-primary btn-lg" routerLink="upload" role="button">Upload Image</a>
   </p>
-  <input type="file" name="myfile" (change)="onFileChanged($event)"/>
+  <input type="file" name="myfile" accept="image/*" (change)="onFileChanged($event)"/>
 </div>
+<img src="" id="radioImg" style="display: none;" />

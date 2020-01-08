@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-scan',
@@ -7,14 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScanComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit() {
   }
 
   onFileChanged(event) {
     const file = event.target.files[0];
-    console.log(file);
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event: any) => {
+      var dataURL = reader.result;
+      var output = document.getElementById('radioImg');
+      output.src = dataURL;
+      
+      this.service.scanImage(output);
+
+      // navigate to recommendations
+    });
+
+    reader.readAsDataURL(event.target.files[0]);
   }
 
 }
